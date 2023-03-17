@@ -49,6 +49,8 @@ export default {
       .catch(error => {
         console.log(error.response.data)
       })
+
+    this.getSong()
   },
   methods: {
     getSong: function () {
