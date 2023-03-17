@@ -43,6 +43,7 @@ export default {
       .post(url, new URLSearchParams(data), { headers })
       .then(response => {
         const access_token = response.data.access_token
+        console.log(access_token)
         this.access = access_token
       })
       .catch(error => {
