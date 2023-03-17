@@ -24,40 +24,14 @@ export default {
     }
   },
   mounted() {
-    const axios = require('axios')
-
-    const client_id = '174100d333c649f78b6cdef199fca052'
-    const client_secret = '61f3b0453f154b6086cae7ef0af97b33'
-    const grant_type = 'client_credentials'
-    const url = 'https://accounts.spotify.com/api/token'
-
-    const headers = {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      Authorization: 'Basic ' + btoa(client_id + ':' + client_secret),
-    }
-
-    const data = {
-      grant_type: grant_type,
-    }
-
-    axios
-      .post(url, new URLSearchParams(data), { headers })
-      .then(response => {
-        const access_token = response.data.access_token
-        console.log(access_token)
-        this.access = access_token
-      })
-      .catch(error => {
-        console.log(error.response.data)
-      })
-
     this.getSong()
   },
   methods: {
     getSong: function () {
-      const access_token = this.access
+      const access_token =
+        'BQDX4RVlSOREaTCTFWje1sH2wbWDOC-pd4nNNIcZvRoDTy80tCfcmVlmH18aDFllWo0hQdBGYr1nbO8BceXfnYtunTlE6eua3B-7HiqFq10jxV4dPiN-'
       const headers = {
-        Authorization: 'Bearer ' + access_token,
+        Authorization: 'Bearer ' + 'access_token',
         'Content-Type': 'application/json',
       }
       const query = 'Fuck you' // your song query here
