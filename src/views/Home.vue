@@ -56,7 +56,7 @@ export default {
         Authorization: 'Bearer ' + access_token,
         'Content-Type': 'application/json',
       }
-      const query = 'Parle à ma main' // your song query here
+      const query = 'Furck you' // your song query here
       const type = 'track'
       const url = `https://api.spotify.com/v1/search?q=${query}&type=${type}`
 
